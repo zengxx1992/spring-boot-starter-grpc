@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/v1/user")
+@RequestMapping("/grpc/hessian")
 public class V1UserController {
 
     private final UserServiceBySofaHessian userServiceBySofaHessian;

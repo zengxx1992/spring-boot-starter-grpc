@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/v2/user")
+@RequestMapping("/grpc/proto")
 public class V2UserController {
 
     private final UserServiceByProtoStuff userServiceByProtoStuff;

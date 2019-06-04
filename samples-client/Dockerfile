@@ -1,7 +1,5 @@
-FROM registry.cn-hangzhou.aliyuncs.com/micro-java/openjdk:8-jre-alpine
-MAINTAINER yangyuandong@tezign.com
-ENV TZ="Asia/Shanghai" HOME="/root" JVM_PARAMS=" " SPRING_PARAMS=" "
-WORKDIR ${HOME}
-ADD target/*.jar ${HOME}/ROOT.jar
-EXPOSE 8081
-CMD java $JVM_PARAMS -Djava.security.egd=file:/dev/./urandom -jar ${HOME}/ROOT.jar $SPRING_PARAMS
+From jre-8-simple-alpine-glibc:latest
+COPY target/samples-client-1.0-SNAPSHOT.jar /grpc-client.jar
+EXPOSE 8080
+EXPOSE 6565
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar", "/grpc-client.jar"]

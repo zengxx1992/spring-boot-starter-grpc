@@ -39,6 +39,9 @@ public class UserServiceByProtoStuffImpl implements UserServiceByProtoStuff {
 
     @Override
     public List<UserEntity> findAll() {
+        UserEntity userEntity = new UserEntity();
+        userEntity.setName("ProtoStu");
+        userMap.put(1L, userEntity);
         Collection<UserEntity> values = userMap.values();
         return new ArrayList<>(values);
     }

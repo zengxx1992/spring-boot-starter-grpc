@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/v3/user")
+@RequestMapping("/grpc/json")
 public class V3UserController {
 
     private final UserServiceByFastJSON userServiceByFastJSON;

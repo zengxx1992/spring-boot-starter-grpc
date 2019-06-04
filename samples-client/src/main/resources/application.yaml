@@ -1,9 +1,9 @@
 server:
-  port: 8081
+  port: 8080
 
 spring:
   grpc:
     remote-servers:
     - server: user
-      host: 127.0.0.1
+      host: grpc-server
       port: 6565

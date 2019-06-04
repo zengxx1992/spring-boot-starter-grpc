@@ -42,6 +42,9 @@ public class UserServiceByFastJSONImpl implements UserServiceByFastJSON {
 
     @Override
     public List<UserEntity> findAll() {
+        UserEntity userEntity = new UserEntity();
+        userEntity.setName("FastJSON");
+        userMap.put(1L, userEntity);
         Collection<UserEntity> values = userMap.values();
         return new ArrayList<>(values);
     }

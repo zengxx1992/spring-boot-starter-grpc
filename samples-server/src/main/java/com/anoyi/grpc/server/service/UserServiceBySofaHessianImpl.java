@@ -37,6 +37,9 @@ public class UserServiceBySofaHessianImpl implements UserServiceBySofaHessian {
     @Override
     public List<UserEntity> findAll() {
         log.info("load balance....");
+        UserEntity userEntity = new UserEntity();
+        userEntity.setName("SofaHessian");
+        userMap.put(1L, userEntity);
         Collection<UserEntity> values = userMap.values();
         return new ArrayList<>(values);
     }
